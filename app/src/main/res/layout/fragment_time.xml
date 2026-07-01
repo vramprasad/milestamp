@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F7FA">
+
+    <!--    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time Logger"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A1C1E"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:layout_marginBottom="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIn"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_marginEnd="5dp"
+                android:text="IN"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#2E7D32"
+                app:cornerRadius="12dp"
+                android:padding="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOut"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="5dp"
+                android:text="OUT"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#C62828"
+                app:cornerRadius="12dp"
+                android:padding="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFetch"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_marginEnd="5dp"
+                android:text="All Entries"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#4A148C"
+                app:cornerRadius="12dp"
+                android:padding="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFetchCurrentSession"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="5dp"
+                android:text="Active Summary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#1565C0"
+                app:cornerRadius="12dp"
+                android:padding="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_span="2"
+                android:text="Clear All Entries"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#616161"
+                app:cornerRadius="12dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logs Terminal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#4A4A4A"
+        android:layout_marginBottom="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#EEEFF2"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No logs fetched yet..."
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:fontFamily="monospace" />
+    </ScrollView>
+
+</LinearLayout>
